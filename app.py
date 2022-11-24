@@ -56,9 +56,14 @@ try:
         e = pygame.event.wait()
         draw_partition_line()
 
-        # clear screen after right click
-        if(e.type == pygame.MOUSEBUTTONDOWN and e.button == 3):
+        # clear screen after right click or "r" keydown
+        if(e.type == pygame.MOUSEBUTTONDOWN and e.button == 3) or (e.type == pygame.KEYDOWN and e.key == pygame.K_r):
             screen.fill(white)
+
+        # quit app after "q" keydown
+        if e.type == pygame.KEYDOWN:
+          if e.key == pygame.K_q:
+            raise StopIteration
 
         # quit
         if e.type == pygame.QUIT:
