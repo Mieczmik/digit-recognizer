@@ -7,7 +7,7 @@ from keras.models import load_model
 
 
 # loading pre trained model
-model = load_model('models/mieczmik-mnist-model')
+model = load_model('deeplearning/mieczmik-mnist-model')
 
 def predict_digit(img):
     test_image = img.reshape(-1,28,28,1)
