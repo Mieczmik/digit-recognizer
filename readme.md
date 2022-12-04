@@ -15,9 +15,13 @@ To run this notebook interactively:
 3. Navigate to the directory where you unzipped or cloned the repo and create a virtual environment with `virtualenv env`.
 4. Activate the environment with `source env/bin/activate`.
 5. Install the required dependencies with `pip install -r requirements.txt`.
-  6. Execute `ipython notebook` from the command line or terminal.
-  7. Click on `deeplearning/MNIST.ipynb` in the IPython Notebook dashboard and enjoy!
-8. When you're done deactivate the virtual environment with `deactivate`.
+  6. Execute `ipython notebook` from the command line or terminal and  click on `deeplearning/MNIST.ipynb` in the IPython Notebook dashboard and enjoy!
+  6. Or run app.py from main folder and draw the digits on left side of the window and output will appear on right side of the window. Have fun!
+  Mouse/keyboard handling:<br />
+  &nbsp;* The left button is for drawing.<br />
+  &nbsp;* Refresh screen: press the R button or the right button on the mouse.<br />
+  &nbsp;* Quit application: press the Q button.<br />
+7. When you're done deactivate the virtual environment with `deactivate`.
 
 # CNN
 This is a 5 layers Sequential Convolutional Neural Network for digits recognition trained on MNIST dataset. I choosed to build it with keras API (Tensorflow backend) which is very intuitive. Firstly, I will prepare the data (handwritten digits images) then I will focus on the CNN modeling and evaluation.
@@ -68,6 +72,8 @@ For the data augmentation was chosen:
 This is a RealTime-DigitRecognition application which can predict output corresponding to handwritten images. I used sequential model of Tensorflow/Keras described above for creating this predictive application. <br>
 
 The interface is created by using **Pygame**. The image preprocessing is the most important in this project which I have done by using **Scipy** and **OpenCV**.
+
+
 ## Dependencies
 This is the list of dependencies for running this application.
  * **Skleran**
